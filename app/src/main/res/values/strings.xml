@@ -8,9 +8,15 @@
     which runs in the background and checks every 15 minutes if Amazfit Zepp is missing the
     “Notification read, reply, and control” permission. If it is missing it gives a notification
     on your phone which allows you to directly open the setting. Far from ideal but it is something.
+    \n\nThis app will do all that for you automatically if you give Shizuku permission.
     \n\nHope Amazfit will fix this soon!]]></string>
     <string name="permission">Notification read, reply, and control</string>
+    <string name="permission_restored">Notification read, reply, and control permission restored</string>
     <string name="toast">Notification access missing for %1$s</string>
     <string name="notification_title">Enable Zepp Notification Access</string>
     <string name="notification_text">Open settings</string>
+    <string name="request_shizuku_permission_button">Request Shizuku permission</string>
+    <string name="shizuku_not_available">Shizuku is not available</string>
+    <string name="shizuku_permission_denied">Shizuku permission was denied.</string>
+    <string name="shizuku_permission_granted">Uses Shizuku when available</string>
 </resources>

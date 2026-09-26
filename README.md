@@ -2,4 +2,6 @@ Amazfit’s Zepp application requires “Notification read, reply, and control�
 
 I hacked this little project, which runs in the background and checks every 15 minutes if Amazfit Zepp is missing the “Notification read, reply, and control” permission. If it is missing it gives a notification on your phone which allows you to directly open the setting. Far from ideal but it is something.
 
+This app will do all that for you automatically if you give Shizuku permission.
+
 Hope Amazfit will fix this soon!

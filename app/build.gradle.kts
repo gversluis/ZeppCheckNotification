@@ -12,8 +12,8 @@ android {
         applicationId = "nodomain.watcher.checkzeppnotificationJob"
         minSdk = 24
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 11
+        versionName = "1.1"
         setProperty("archivesBaseName", applicationId + "-v" + versionName)
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
@@ -21,6 +21,7 @@ android {
 
     buildFeatures {
         viewBinding = true
+        aidl = true
     }
 
     buildTypes {
@@ -47,7 +48,7 @@ android {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx.v1120)
+    implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.work.runtime.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -59,6 +60,8 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.shizuku.api)
+    implementation(libs.shizuku.provider)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
