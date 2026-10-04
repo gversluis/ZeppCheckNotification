@@ -53,13 +53,23 @@
                 android:text="@string/shizuku_permission_granted" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/shizukuButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:padding="12dp"
                 android:text="@string/request_shizuku_permission_button"
                 android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/checkButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:padding="12dp"
+                android:text="@string/check_now"
+                android:textSize="20sp" />
+
         </LinearLayout>
     </ScrollView>
 

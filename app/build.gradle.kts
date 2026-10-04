@@ -13,8 +13,8 @@ android {
         minSdk = 24
         targetSdk = 35
         versionCode = 11
-        versionName = "1.1"
-        setProperty("archivesBaseName", applicationId + "-v" + versionName)
+        versionName = "1.2"
+        setProperty("archivesBaseName", "zepp check notification v" + versionName)
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
     }

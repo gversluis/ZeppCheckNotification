@@ -19,4 +19,6 @@
     <string name="shizuku_not_available">Shizuku is not available</string>
     <string name="shizuku_permission_denied">Shizuku permission was denied.</string>
     <string name="shizuku_permission_granted">Uses Shizuku when available</string>
+    <string name="check_now">Check now</string>
+    <string name="already_enabled">Notifcation service was already enabled</string>
 </resources>

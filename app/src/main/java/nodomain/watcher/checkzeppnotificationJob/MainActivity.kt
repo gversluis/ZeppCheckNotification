@@ -49,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         createViewTextLinks()
         Shizuku.addRequestPermissionResultListener(permissionListener)
         checkShizukuAndRequest()
+        bindCheckButton()
     }
 
     override fun onResume() {
@@ -99,8 +100,23 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun bindCheckButton() {
+        val checkButton = findViewById<Button>(R.id.checkButton)
+        checkButton.setOnClickListener {
+            val notificationAccess = NotificationAccess(applicationContext)
+            with(notificationAccess) {
+                if (isNotificationListenerEnabled()) {
+                    Toast.makeText(applicationContext, getString(R.string.already_enabled),Toast.LENGTH_LONG).show()
+                } else {
+                    prepare()
+                    check()
+                }
+            }
+        }
+    }
+
     private fun grantedNotificationAccess() {
-        findViewById<Button>(R.id.button).visibility = View.GONE
+        findViewById<Button>(R.id.shizukuButton).visibility = View.GONE
         findViewById<CheckBox>(R.id.shizukuEnabled).visibility = View.VISIBLE
     }
 
@@ -110,7 +126,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun checkShizukuAndRequest() {
-        val button = findViewById<Button>(R.id.button)
+        val button = findViewById<Button>(R.id.shizukuButton)
         button.visibility = View.VISIBLE
         button.setOnClickListener { requestedShizuku=false; checkShizukuAndRequest() }
         findViewById<CheckBox>(R.id.shizukuEnabled).visibility = View.GONE
